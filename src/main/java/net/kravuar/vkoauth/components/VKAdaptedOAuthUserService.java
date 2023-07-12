@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 public class VKAdaptedOAuthUserService extends DefaultOAuth2UserService {
-    private static final String userNameAttributeName = "user_id";
+    private static final String userNameAttributeName = "id";
 
     @Override
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {

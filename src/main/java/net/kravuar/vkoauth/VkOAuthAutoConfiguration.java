@@ -24,7 +24,7 @@ import java.util.Arrays;
 
 @AutoConfiguration(before = WebMvcAutoConfiguration.class)
 @ConditionalOnClass({HttpSecurity.class, OAuth2LoginAuthenticationProvider.class})
-@ConditionalOnProperty("spring.security.oauth.registration['vk']")
+@ConditionalOnProperty(prefix = "spring.security.oauth2.client.registration.vk", value = "client-id")
 public class VkOAuthAutoConfiguration {
     @Bean
     public DefaultVkPropsInsertingBeanPostProcessor vkPropsInsertingBeanPostProcessor() {
