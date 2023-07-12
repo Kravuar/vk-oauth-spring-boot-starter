@@ -33,6 +33,8 @@ public class DefaultVkPropsInsertingBeanPostProcessor implements BeanPostProcess
                 vkRegistration.setClientName(DefaultVkRegistrationProps.clientName);
             if (vkRegistration.getClientAuthenticationMethod() == null)
                 vkRegistration.setClientAuthenticationMethod(DefaultVkRegistrationProps.clientAuthenticationMethod);
+            if (vkRegistration.getRedirectUri() == null)
+                vkRegistration.setRedirectUri(DefaultVkRegistrationProps.redirectUri);
         }
         return bean;
     }
